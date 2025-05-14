@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merch Store - Every Journey Deserves a Welcome</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <script defer src="script.js"></script>
+</head>
+<body>  <header>    <nav>
+      <div class="nav-container">
+        <button class="menu-toggle" onclick="toggleMenu()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <ul id="navbar">
+          <li><a href="everyjournet.html">Our Mission</a></li>
+          <li><a href="donators.html">Our Supporters</a></li>
+          <li><a href="merch.html" class="active">Merch</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <a href="everyjournet.html#emergency-contact" class="emergency-nav-btn">
+        <i class="fas fa-exclamation-circle"></i>
+        Emergency Help
+      </a>
+    </nav>
+    <a href="#cart" class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+      <span class="cart-count">0</span>
+    </a>
+  </header>
+
+  <section id="shop">
+    <!-- White Shirt -->
+    <div class="product" data-aos="fade-up">      <div class="product-image">
+        <img src="Images/whiteshirt.png" alt="White Shirt" loading="lazy">
+        <div class="product-overlay">
+          <span class="product-details">100% Organic Cotton</span>
+        </div>
+      </div>
+      <h3>White T-Shirt</h3>
+      <label for="size-white">Size:</label>
+      <select id="size-white">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <p class="price">$20.00</p>
+      <button onclick="addToCart('White T-Shirt', document.getElementById('size-white').value)" class="add-to-cart-btn">
+        <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+
+    <!-- Black Shirt -->
+    <div class="product" data-aos="fade-up" data-aos-delay="100">      <div class="product-image">
+        <img src="Images/blackshirt.png" alt="Black Shirt" loading="lazy">
+        <div class="product-overlay">
+          <span class="product-details">100% Organic Cotton</span>
+        </div>
+      </div>
+      <h3>Black T-Shirt</h3>
+      <label for="size-black">Size:</label>
+      <select id="size-black">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+      <p class="price">$20.00</p>
+      <button onclick="addToCart('Black T-Shirt', document.getElementById('size-black').value)" class="add-to-cart-btn">
+        <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+
+    <!-- Bundle Offer -->
+    <div class="product bundle" data-aos="fade-up" data-aos-delay="200">
+      <div class="bundle-badge">Best Value</div>
+      <h3>🧡 Full Bundle Deal</h3>
+      <div class="bundle-content">
+        <p>Get our complete merchandise set:</p>
+        <ul class="bundle-items">
+          <li><i class="fas fa-tshirt"></i> 1 T-Shirt</li>
+          <li><i class="fas fa-mug-hot"></i> 1 Mug</li>
+          <li><i class="fas fa-shopping-bag"></i> 1 Tote Bag</li>
+          <li><i class="fas fa-gift"></i> 1 Free Item of Choice!</li>
+        </ul>
+        <p class="bundle-price">$45.00</p>
+        <p class="bundle-save">Save $17!</p>
+      </div>
+      <button onclick="addToCart('Full Bundle Deal')" class="add-to-cart-btn bundle-btn">
+        <i class="fas fa-cart-plus"></i> Add Bundle to Cart
+      </button>
+    </div>
+
+    <!-- Tote Bags -->
+    <div class="product" data-aos="fade-up" data-aos-delay="300">      <div class="product-image">
+        <img src="Images/whitebag.png" alt="White Tote Bag" loading="lazy">
+        <div class="product-overlay">
+          <span class="product-details">Durable Canvas Material</span>
+        </div>
+      </div>
+      <h3>White Tote Bag</h3>
+      <p class="price">$12.00</p>
+      <button onclick="addToCart('White Tote Bag')" class="add-to-cart-btn">
+        <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+
+    <div class="product" data-aos="fade-up" data-aos-delay="400">      <div class="product-image">
+        <img src="Images/bluebag.png" alt="Blue Tote Bag" loading="lazy">
+        <div class="product-overlay">
+          <span class="product-details">Durable Canvas Material</span>
+        </div>
+      </div>
+      <h3>Blue Tote Bag</h3>
+      <p class="price">$12.00</p>
+      <button onclick="addToCart('Blue Tote Bag')" class="add-to-cart-btn">
+        <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+
+    <!-- Mug -->
+    <div class="product" data-aos="fade-up" data-aos-delay="500">      <div class="product-image">
+        <img src="Images/mug.png" alt="Mug" loading="lazy">
+        <div class="product-overlay">
+          <span class="product-details">Premium Ceramic</span>
+        </div>
+      </div>
+      <h3>Ceramic Mug</h3>
+      <p class="price">$10.00</p>
+      <button onclick="addToCart('Mug')" class="add-to-cart-btn">
+        <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+
+    <!-- White Cap -->
+    <div class="product" data-aos="fade-up" data-aos-delay="500">
+      <div class="product-image">
+        <img src="Images/whitecap.png" alt="White Cap" loading="lazy">
+        <div class="product-overlay">
+          <span class="product-details">Adjustable Size</span>
+        </div>
+      </div>
+      <h3>White Cap</h3>
+      <p class="price">$15.00</p>
+      <button onclick="addToCart('White Cap')" class="add-to-cart-btn">
+        <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+
+    <!-- Sticker Pack -->
+    <div class="product" data-aos="fade-up" data-aos-delay="600">
+      <div class="product-image">
+        <img src="Images/stickers.png" alt="Sticker Pack" loading="lazy">
+        <div class="product-overlay">
+          <span class="product-details">Set of 5 Stickers</span>
+        </div>
+      </div>
+      <h3>Sticker Pack</h3>
+      <p class="price">$5.00</p>
+      <button onclick="addToCart('Sticker Pack')" class="add-to-cart-btn">
+        <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+
+    <!-- Phone Case -->
+    <div class="product" data-aos="fade-up" data-aos-delay="700">
+      <div class="product-image">
+        <img src="Images/phonecases.png" alt="Phone Case" loading="lazy">
+        <div class="product-overlay">
+          <span class="product-details">Available for iPhone & Android</span>
+        </div>
+      </div>
+      <h3>Phone Case</h3>
+      <label for="phone-model">Model:</label>
+      <select id="phone-model">
+        <option value="iphone-13">iPhone 13</option>
+        <option value="iphone-14">iPhone 14</option>
+        <option value="samsung-s22">Samsung S22</option>
+        <option value="samsung-s23">Samsung S23</option>
+      </select>
+      <p class="price">$18.00</p>
+      <button onclick="addToCart('Phone Case', document.getElementById('phone-model').value)" class="add-to-cart-btn">
+        <i class="fas fa-cart-plus"></i> Add to Cart
+      </button>
+    </div>
+  </section>
+
+  <section id="cart-section">
+    <div class="promo">
+      <h3><i class="fas fa-tag"></i> Have a Promo Code?</h3>
+      <div class="promo-input">
+        <input type="text" id="promo" placeholder="Enter your code">
+        <button onclick="applyPromoCode()">Apply</button>
+      </div>
+    </div>
+
+    <div id="cart">
+      <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+      <ul id="cart-items"></ul>
+      <div id="cart-summary">
+        <p id="cart-total"></p>
+        <button onclick="checkoutCart()" class="checkout-btn">
+          <i class="fas fa-credit-card"></i> Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>Supporting refugee journeys through ethical merchandise.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="everyjournet.html">Our Mission</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p><i class="fas fa-envelope"></i> info@everyjourney.org</p>
+        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Every Journey Deserves a Welcome. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- AOS Animation Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+</body>
+</html>
